@@ -7,9 +7,12 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class LoginPage extends BaseTest {
 
+    // Define locators
     By loginTextBox = AppiumBy.accessibilityId("test-Username");
     By passwordTextBox = AppiumBy.accessibilityId("test-Password");
     By loginButton = AppiumBy.accessibilityId("test-LOGIN");
+    By errorMessage = AppiumBy.xpath("//*[contains(@text, 'Username and password do not match any user in this service')]");
+
 
     public void validateOnPage() {
         wait.until(ExpectedConditions.presenceOfElementLocated(loginTextBox));

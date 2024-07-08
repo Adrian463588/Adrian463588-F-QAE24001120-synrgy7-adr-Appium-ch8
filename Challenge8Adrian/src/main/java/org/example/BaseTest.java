@@ -2,6 +2,7 @@ package org.example;
 
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -24,6 +25,7 @@ public class BaseTest {
 
         driver = new AndroidDriver(capabilities);
         wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+
     }
 
     public static void tearDown() {
